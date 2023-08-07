@@ -40,20 +40,22 @@ class Dish:
     def get_ingredients(self):
         return set(self.recipe.keys())
 
+
 # Vamos criar alguns objetos Ingredient para usar nos pratos
-# queijo = Ingredient("queijo")
-# farinha = Ingredient("farinha")
-# camarao = Ingredient("camarão")
-# cebola = Ingredient("cebola")
+queijo = Ingredient("queijo")
+farinha = Ingredient("farinha")
+camarao = Ingredient("camarão")
+cebola = Ingredient("cebola")
+
 
 # # Vamos criar os pratos
-# prato1 = Dish("Pizza", 25.0)
+prato1 = Dish("Pizza", 25.0)
 # prato2 = Dish("Risoto", 30.0)
 
 # Vamos adicionar ingredientes aos pratos usando o método add_ingre
-# prato1.add_ingredient_dependency(queijo, 2)
-# prato1.add_ingredient_dependency(farinha, 1)
-# prato1.add_ingredient_dependency(cebola, 1)
+prato1.add_ingredient_dependency(queijo, 2)
+prato1.add_ingredient_dependency(farinha, 1)
+prato1.add_ingredient_dependency(cebola, 1)
 
 # prato2.add_ingredient_dependency(farinha, 1)
 # prato2.add_ingredient_dependency(camarao, 10)
@@ -63,8 +65,8 @@ class Dish:
 # print("Restrições do prato 1:", prato1.get_restrictions())
 # print("Restrições do prato 2:", prato2.get_restrictions())
 
-# # Vamos verificar os ingredientes dos pratos usando o método get_ingredien
-# print("Ingredientes do prato 1:", prato1.get_ingredients())
+# Vamos verificar os ingredientes dos pratos usando o método get_ingredien
+print("Ingredientes do prato 1:", prato1.get_ingredients())
 # print("Ingredientes do prato 2:", prato2.get_ingredients())
 
-# print(prato1.recipe)
+print(prato1.recipe)
