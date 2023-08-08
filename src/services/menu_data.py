@@ -1,6 +1,7 @@
 import csv
 from models.dish import Dish
 from models.ingredient import Ingredient
+csv_file_path = 'data/menu_base_data.csv'
 
 
 class MenuData:
@@ -25,3 +26,9 @@ class MenuData:
                 )
 
         return set(dishes.values())
+
+
+menu = MenuData(csv_file_path)
+
+# for dish in menu.dishes:
+#     print(dish)
