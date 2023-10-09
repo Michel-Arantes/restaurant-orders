@@ -30,5 +30,5 @@ class MenuData:
 
 menu = MenuData(csv_file_path)
 
-# for dish in menu.dishes:
-#     print(dish)
+for dish in menu.dishes:
+    print(dish)

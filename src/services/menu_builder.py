@@ -2,7 +2,7 @@ from typing import Dict, List
 
 from services.inventory_control import InventoryMapping
 from services.menu_data import MenuData
-from src.models.ingredient import Restriction
+# from src.models.ingredient import Restriction
 
 DATA_PATH = "data/menu_base_data.csv"
 INVENTORY_PATH = "data/inventory_base_data.csv"
@@ -28,26 +28,30 @@ class MenuBuilder:
     # Req 4
     def get_main_menu(self, restriction=None) -> List[Dict]:
         menu = []
-        for dish in self.menu_data.dishes:
-            if not any(restriction in ingredient.restrictions for ingredient
-                       in dish.get_ingredients()):
-                dish_info = {
-                    "dish_name": dish.name,
-                    "ingredients": dish.get_ingredients(),
-                    "price": dish.price,
-                    "restrictions": dish.get_restrictions()
-                }
-                menu.append(dish_info)
+        for dish in self.menu_data:
+            restrictions = dish.get_restrictions()
+            if (
+                restriction not in restrictions
+                and self.inventory.check_recipe_availability(dish.recipe)
+            ):
+                menu.append(
+                    {
+                        "dish_name": dish.name,
+                        "ingredients": dish.get_ingredients(),
+                        "price": dish.price,
+                        "restrictions": dish.get_restrictions()
+                    }
+                )
 
         return menu
 
 
 # Criando um objeto MenuBuilder
-menu_builder = MenuBuilder()
+# menu_builder = MenuBuilder()
 
-menu_with_animal_restrictions = menu_builder.get_main_menu(
-    Restriction.ANIMAL_MEAT)
+# menu_with_animal_restrictions = menu_builder.get_main_menu(
+#     Restriction.ANIMAL_MEAT)
 
-print("Menu with Presunto Restriction:")
-for dish in menu_with_animal_restrictions:
-    print(dish)
+# print("Menu with Presunto Restriction:")
+# for dish in menu_with_animal_restrictions:
+#     print(dish)
