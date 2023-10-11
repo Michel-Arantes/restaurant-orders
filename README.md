@@ -12,7 +12,7 @@ O Restaurant Orders é uma aplicação back-end web desenvolvida em Python, que 
 - Realizar o controle de estoque de ingredientes
 - Gerar cardápios dinâmicos considerando restrições alimentares e disponibilidade em estoque
 
-## Tecnologias e habilidades Utilizadas
+## Tecnologias e habilidades utilizadas
 - Python
 - Pytest
 - -Manipulação de dados de arquivos CSV
@@ -31,7 +31,7 @@ cd meu-diretorio
 Clone o projeto com o comando `git clone`:
 
 ```bash
-git clone git@github.com:michelmix/tb-restaurant-orders.git
+git clone git@github.com:michelmix/restaurant-orders.git
 ```
 
 Acesse o diretório do projeto com o comando `cd`:
