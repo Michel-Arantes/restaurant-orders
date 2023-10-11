@@ -15,7 +15,7 @@ O Restaurant Orders é uma aplicação back-end web desenvolvida em Python, que 
 ## Tecnologias e habilidades utilizadas
 - Python
 - Pytest
-- -Manipulação de dados de arquivos CSV
+- Manipulação de dados de arquivos CSV
 - Praticar o conceito de Hashmaps através das estruturas de dados Dict e Set do Python.
 - Praticar os conhecimentos de orientação a objetos
   
