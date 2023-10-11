@@ -65,7 +65,7 @@ prato1.add_ingredient_dependency(cebola, 1)
 # print("Restrições do prato 1:", prato1.get_restrictions())
 # print("Restrições do prato 2:", prato2.get_restrictions())
 
-# Vamos verificar os ingredientes dos pratos usando o método get_ingredien
+# Vamos verificar os ingredientes dos pratos usando o método get_ingredient
 print("Ingredientes do prato 1:", prato1.get_ingredients())
 # print("Ingredientes do prato 2:", prato2.get_ingredients())
 

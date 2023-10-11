@@ -2,7 +2,6 @@ from typing import Dict, List
 
 from services.inventory_control import InventoryMapping
 from services.menu_data import MenuData
-# from src.models.ingredient import Restriction
 
 DATA_PATH = "data/menu_base_data.csv"
 INVENTORY_PATH = "data/inventory_base_data.csv"
@@ -39,19 +38,25 @@ class MenuBuilder:
                         "dish_name": dish.name,
                         "ingredients": dish.get_ingredients(),
                         "price": dish.price,
-                        "restrictions": dish.get_restrictions()
+                        "restrictions": restrictions,
                     }
                 )
 
         return menu
-
-
+    
 # Criando um objeto MenuBuilder
 # menu_builder = MenuBuilder()
 
 # menu_with_animal_restrictions = menu_builder.get_main_menu(
 #     Restriction.ANIMAL_MEAT)
 
+# print("Menu with Presunto Restriction:")
+# for dish in menu_with_animal_restrictions:
+#     print(dish)
+# Criando um objeto MenuBuilder
+# menu_builder = MenuBuilder()
+# menu_with_animal_restrictions = menu_builder.get_main_menu(
+#     Restriction.ANIMAL_MEAT)
 # print("Menu with Presunto Restriction:")
 # for dish in menu_with_animal_restrictions:
 #     print(dish)
